@@ -1,0 +1,50 @@
+version: '3'
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  postgres:
+    build: ./
+    container_name: postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_HOST_AUTH_METHOD: trust
+    restart: always
+
+    networks:
+      - backend
+  phoenix:
+    build: ./timemanager
+    container_name: phoenix
+    volumes:
+      - ./timemanager:/usr/src/app/back/
+    command: ./entrypoint.sh
+    ports:
+      - 4000:4000
+    depends_on:
+      - postgres
+    networks:
+      - backend
+  front:
+    build: ./client
+    container_name: frontend
+    volumes:
+      - ./client:/usr/src/app/front/
+      - /usr/src/app/front/node_modules
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+volumes:
+  pgdata:
+  
+   
+  

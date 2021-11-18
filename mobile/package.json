@@ -1,0 +1,72 @@
+{
+  "name": "io.cordova.hellocordova",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "author": {
+    "name": "Apache Cordova Team"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "/bin/rm -rf /home/zachari-blinn/Projects/Epitech/T-POO-700-MLH-1/mobile/www/* && vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chart.js": "^3.6.0",
+    "core-js": "^3.6.5",
+    "luxon": "^2.0.2",
+    "vue": "^3.0.0",
+    "vue-chart-3": "^0.5.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "cordova-android": "^9.1.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "_id": "io.cordova.hellocordova@1.0.0",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "browser",
+      "android"
+    ]
+  },
+  "displayName": "HelloCordova",
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "license": "Apache-2.0",
+  "readme": "ERROR: No README data found!"
+}

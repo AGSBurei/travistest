@@ -12,7 +12,5 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
   -  docker-compose build
-
-deploy:
-  - provider: script
-    script: deploy.sh
+  
+script: ./deploy.sh
